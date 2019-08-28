@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'game.dart';
 
 void main() => runApp(MaterialApp(
     home: Home()
@@ -28,7 +29,12 @@ class Home extends StatelessWidget {
            Image.asset('images/cover-quiz-light.png'),
            SizedBox(height: 20),
            RaisedButton(
-             onPressed: (){},
+             onPressed: (){
+               Navigator.push(
+                 context,
+                 MaterialPageRoute(builder: (context) => Game())
+               );
+             },
              color: Colors.grey[100],
              child: Text('PLAY',
               style: TextStyle(
